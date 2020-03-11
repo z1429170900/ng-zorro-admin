@@ -1,0 +1,61 @@
+$headerH: 8vh;
+$openH: 3vh;
+.population {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(../../assets/image/bg.jpg);
+    position: relative;
+    .tool_btns {
+        position: absolute;
+        top: $headerH;
+        right: 2vw;
+        height: $openH;
+        z-index: 20;
+        .btn_item {
+            color: #fff;
+            border: 1px solid #04e8df;
+            border-radius: 0.25vw;
+            text-align: center;
+            height: $openH;
+            line-height: $openH;
+            background-color: rgba(0,255,255,0.3);
+            width: 5vw;
+            display: inline-block;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .btn_item:hover {
+            background-color: #14405f;
+        }
+    }
+    .public_column {
+        width: 100%;
+        height: 100vh - $headerH;
+        .column_item1, .column_item2, .column_item3 {
+            width: 33.3%;
+            height: 100%;
+            padding: 2vh 1vw;
+            box-sizing: border-box;
+        }
+        .border {
+            border: 1px solid #ccc;
+            height: 100%;
+            width: 100%;
+        }
+        .first,.second {
+            width: 100%;
+            height: 50%;
+            padding-top: 5%;
+            box-sizing: border-box;
+        }
+        .left_first {
+            height: 52.5%;
+            width: 100%;
+        }
+        .left_second {
+            height: 47.5%;
+            width: 100%;
+        }
+    }
+}

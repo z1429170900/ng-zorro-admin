@@ -1,0 +1,26 @@
+.o_table {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    .t_header {
+        padding: 0.5vh 0;
+    }
+    .over_box {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    .t_body {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: transform 0.5s linear;
+        li {
+            padding-bottom: 0.5vh;
+        }
+        li:nth-last-child(1) {
+            padding-bottom: 0;
+        }
+    }
+}

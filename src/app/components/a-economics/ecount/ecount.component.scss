@@ -1,0 +1,19 @@
+.e_count {
+    height: 100%;
+    width: 100%;
+    .count_com {
+        height: 24%;
+    }
+    .charts {
+        height: 76%;
+        padding-top: 4%;
+        
+        box-sizing: border-box;
+        #echart {
+            height: 100%;
+            width: 100%;
+            border-radius: 0.5vh;
+            background-color: rgba($color: #fff, $alpha: 0.1);
+        }
+    }
+}

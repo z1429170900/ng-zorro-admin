@@ -1,0 +1,43 @@
+.income {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba($color: #021243, $alpha: 0.7), rgba($color: #0c3f8f, $alpha: 0.7));
+    .chart {
+        .circle_list {
+            height: 40%;
+            width: 100%;
+            padding: 0 1vw;
+            box-sizing: border-box;
+            .circle_item {
+                width: 50%;
+                height: 100%;
+                box-sizing: border-box;
+                .circle {
+                    width: 60%;
+                    height: 100%;
+                }
+                .right_value {
+                    width: 50%;
+                    height: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    .type {
+                        color: #fff;
+                        margin-bottom: 1vh;
+                        letter-spacing: 4px;
+                    }
+                    .value {
+                        color: #00d753;
+                        font-size: 1.5vw;
+                        font-weight: 700;
+                        letter-spacing: 4px;
+                    }
+                }
+            }
+        }
+        #echarts {
+            width: 100%;
+            height: 60%;
+        }
+    }
+}

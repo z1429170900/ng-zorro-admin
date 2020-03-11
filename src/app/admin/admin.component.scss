@@ -1,0 +1,28 @@
+.admin {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .admin_body {
+        height: 100%;
+        width: 100%;
+        .admin_side {
+            float: left;
+            height: 100%;
+            width: 200px;
+            transition: width 0.25s ease-in;
+            overflow: hidden;
+        }
+        .admin_content {
+            float: right;
+            width: calc(100% - 200px);
+            transition: width 0.25s ease-in;
+            height: 100%;
+        }
+        .side_close {
+            width: 80px;
+        }
+        .content_close {
+            width: calc(100% - 80px);
+        }
+    }
+}

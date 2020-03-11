@@ -1,0 +1,154 @@
+<div id="GdMap" style="width: 100vw;height: 100vh;position: absolute;top: 0;left: 0;z-index: 10;">
+    
+</div>
+<div class="basic" (click)="closeSomeThing()">
+    <!-- header -->
+    <app-header [title]="headerTitle"></app-header>
+
+    <!-- 搜索模块 -->
+    <div class="search clearfix">
+        <div class="search_select" (click)="checkTheSelect($event)">
+            <span class="iconfont icon" [ngClass]="search.icon"></span>
+            <span class="text">{{ search.type }}</span>
+            <span class="iconfont icon-xiala icon1"></span>
+        </div>
+        <div class="text_input">
+            <input type="text" [(ngModel)]="search.text" (ngModelChange)="searchTextChange()" placeholder="请输入全名">
+        </div>
+        <div class="close flex_center">
+            <img src="assets/image/close.png" (click)="clearText()" alt="">
+        </div>
+        <!-- 下拉框 -->
+        <div class="select_list" *ngIf="selectListShow">
+            <div class="select_item" *ngFor="let item of getSelectData();index as i;" (click)="setTypeOfSearch($event, item)">
+                <span [ngClass]="item.icon" class="iconfont icon"></span>
+                <span class="text">{{ item.name }}</span>
+            </div>
+        </div>
+    </div>
+    <!-- 跳转链接 -->
+    <div class="open">
+        <div class="btn_item" (click)="urlGo('wangge')">网格地图</div>
+        <div class="btn_item" (click)="urlGo('zhianxiaoqu')">智安小区</div>
+        <div class="btn_item" (click)="urlGo('sipingtai')">四平台</div>
+    </div>
+    <!-- 内容 -->
+    <div class="content" role="main">
+        <!-- 左边统计类 -->
+        <div class="c_left">
+            <div class="organization">
+                <app-organization></app-organization>
+            </div>
+            <div class="kong"></div>
+            <div class="humam_analysis">
+                <app-human-analysis></app-human-analysis>
+            </div>
+            <div class="kong"></div>
+            <div class="house_rehister">
+                <app-house-register></app-house-register>
+            </div>
+        </div>
+        <!-- 中间统计类 -->
+        <div class="c_center">
+
+            <div class="lie_height">
+                <div style="position: absolute;top: 0;left: 0;">
+                    <div class="result_list" *ngIf="resultOfSearch.length>0">
+                        <div class="result_item flex_center" *ngFor="let item of resultOfSearch;index as i;" (click)="checkResult(item)">
+                            <div class="number">{{ i + 1 }}</div>
+                            <div class="form">
+                                <div class="name">
+                                    <span>{{ item.name }}</span>
+                                    <span>{{ '(' + item.card + ')' }}</span>
+                                </div>
+                                <div class="address">
+                                    <span>{{ item.address }}</span>
+                                    <span>{{ item.phone }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result_details" *ngIf="resultDetails.show">
+                        <div class="r_header flex_center">
+                            <div class="pictrue">
+                                <img src="http://img1.imgtn.bdimg.com/it/u=422317832,3201868799&fm=11&gp=0.jpg" alt="">
+                            </div>
+                            <div class="text column_center">
+                                <div class="name">{{ resultDetails.name }}</div>
+                                <div class="address">{{ '祖籍：' + resultDetails.overAddress }}</div>
+                            </div>
+                        </div>
+                        <div class="more_text">
+                            <ul>
+                                <li>
+                                    <span class="key">职业：</span>
+                                    <span class="value">{{ resultDetails.job }}</span>
+                                </li>
+                                <li>
+                                    <span class="key">联系电话：</span>
+                                    <span class="value">{{ resultDetails.phone }}</span>
+                                </li>
+                                <li>
+                                    <span class="key">身份证：</span>
+                                    <span class="value">{{ resultDetails.card }}</span>
+                                </li>
+                                <li>
+                                    <span class="key">现居：</span>
+                                    <span class="value">{{ resultDetails.address }}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 街道考核 -->
+            <div class="center_bottom">
+                <app-assess></app-assess>
+            </div>
+        </div>
+        <!-- 中间地图类 -->
+        <!-- <div class="center_map">
+            <div class="layer" [ngStyle]="{'top': layerStyle.top, 'right': layerStyle.right }">
+                <div class="layer_box">
+                    <div class="layer_bg">
+                        <div class="title">{{ sreetObj.title }}</div>
+                        <div class="count_list clearfix">
+                            <div class="count_item">
+                                <img src="../../assets/image/human@2x.png" alt="">
+                                {{ sreetObj.human_count }}
+                            </div>
+                            <div class="count_item">
+                                <img src="../../assets/image/house@2x.png" alt="">
+                                {{ sreetObj.house_count }}
+                            </div>
+                            <div class="count_item">
+                                <img src="../../assets/image/car@2x.png" alt="">
+                                {{ sreetObj.car_count }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layer_line">
+                    <div class="line"></div>
+                </div>
+            </div>
+            <app-home-map (checked)="checkedBack($event)"></app-home-map>
+        </div> -->
+        <!-- 右边统计类 -->
+        <div class="c_right">
+            <div class="industrial_economy">
+                <app-industrial-economy></app-industrial-economy>
+            </div>
+            
+            <div class="kong"></div>
+            <div class="multiple_event">
+                <app-multiple-event></app-multiple-event>
+            </div>
+            
+            <div class="kong"></div>
+            <div class="safe_danger">
+                <app-safe-danger></app-safe-danger>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="o_table column">
+    <ul class="t_header flex">
+        <li *ngFor="let item of header" [ngStyle]="{'color': item.color, 'width': item.width, 'text-align': item.align}">
+            {{ item.name }}
+        </li>
+    </ul>
+    <div class="over_box flex1" id="OverBox">
+        <ul class="t_body" id="MoveUl" (mouseenter)="mouseOverOfText()" (mouseleave)="mouseLeaveOfText()">
+            <li *ngFor="let item of computerDate" class="flex">
+                <div *ngFor="let jtem of item" [ngStyle]="{'color': jtem.color, 'width': jtem.width, 'text-align': jtem.align}">
+                    {{ jtem.name }}
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+</div>

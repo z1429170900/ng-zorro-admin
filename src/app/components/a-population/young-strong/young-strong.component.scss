@@ -1,0 +1,58 @@
+.young_strong {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba($color: #021243, $alpha: 0.7), rgba($color: #0c3f8f, $alpha: 0.7));
+    .circle_list {
+        justify-content: space-around;
+        width: 100%;
+        padding: 2vh 0;
+        box-sizing: border-box;
+        color: #fff;
+        text-align: center;
+        height: 60%;
+        .circle_item {
+            width: 20%;
+            height: 100%;
+            .circle {
+                width: 100%;
+                height: 80%;
+                position: relative;
+                img {
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+                    animation: circleRun 1s linear infinite;
+                }
+                .count {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #06faff;
+                    font-size: 2vw;
+                }
+            }
+        }
+    }
+    .chart {
+        width: 100%;
+        height: 100%;
+        #echarts {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@keyframes circleRun {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

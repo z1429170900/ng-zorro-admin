@@ -1,0 +1,19 @@
+.side_menu {
+    height: 100%;
+    overflow-y: scroll;
+    margin-right: -18px;
+    background-color: #001529;
+    .logo {
+        height: 68px;
+        background-color: #001529;
+        justify-content: center;
+        align-items: center;
+        img {
+            height: 60%;
+            width: auto;
+        }
+    }
+    ul {
+        min-height: 100%;
+    }
+}

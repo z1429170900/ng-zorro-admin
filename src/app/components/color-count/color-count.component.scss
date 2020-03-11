@@ -1,0 +1,41 @@
+.color_count {
+   width: 100%;
+   height: 100%; 
+   .count_list {
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        .count_item {
+            width: 30%;
+            height: 100%;
+            align-items: center;
+            justify-content: space-around;
+            border-radius: 0.5vh;
+            box-sizing: border-box;
+            .count {
+                font-size: 1.5vw;
+                font-weight: 700;
+                letter-spacing: 0.25vw;
+            }
+            .name {
+                color: #fff;
+                font-size: 0.85vw;
+            }
+        }
+        .orange {
+            border: 3px solid #fc9c08;
+            color: #fc9c08;
+            background-color: rgba($color: #fc9c08, $alpha: 0.2);
+        }
+        .blue {
+            border: 3px solid #04c354;
+            color: #04c354;
+            background-color: rgba($color: #04c354, $alpha: 0.2);
+        }
+        .red {
+            border: 3px solid #f23a03;
+            color: #f23a03;
+            background-color: rgba($color: #f23a03, $alpha: 0.2);
+        }
+    }
+}

@@ -1,0 +1,42 @@
+<div class="economics">
+    <!-- header -->
+    <app-header [title]="headerTitle"></app-header>
+    <!-- body -->
+    <div class="tool_btns">
+        <div class="btn_item" (click)="goBack()">返回</div>
+    </div>
+    <div class="public_column flex">
+        <!-- left -->
+        <div class="column_item1">
+            <div class="left_first">
+                <app-dash-board></app-dash-board>
+            </div>
+            <div class="left_second">
+                <app-ecount></app-ecount>
+            </div>
+        </div>
+        <!-- center -->
+        <div class="column_item2">
+            <div class="first">
+                <!-- 楼宇分析 -->
+                <app-build-up></app-build-up>
+            </div>
+            <div class="second">
+                <!-- 企业分析 -->
+                <app-enterprise></app-enterprise>
+            </div>
+        </div>
+        <!-- right -->
+        <div class="column_item3">
+            <div class="first">
+                <!-- 收入情况分析 -->
+                <app-income></app-income>
+            </div>
+            <div class="second">
+                <!-- 纳税情况分析 -->
+                <app-tax-situation></app-tax-situation>
+                
+            </div>
+        </div>
+    </div>
+</div>

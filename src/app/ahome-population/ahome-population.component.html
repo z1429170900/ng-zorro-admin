@@ -1,0 +1,43 @@
+<div class="population">
+    <!-- header -->
+    <app-header [title]="headerTitle"></app-header>
+    <!-- body -->
+    <div class="tool_btns">
+        <div class="btn_item" (click)="goBack()">返回</div>
+    </div>
+    <div class="public_column flex">
+        <!-- left -->
+        <div class="column_item1">
+            <div class="left_first">
+                <!-- 仪表盘 -->
+                <app-dash-board></app-dash-board>
+            </div>
+            <div class="left_second">
+                <!-- 数量统计 -->
+                <app-pcount></app-pcount>
+            </div>
+        </div>
+        <!-- center -->
+        <div class="column_item2">
+            <div class="first">
+                <!-- 人口青壮占比 -->
+                <app-young-strong></app-young-strong>
+            </div>
+            <div class="second">
+                <!-- 人口境外占比 -->
+                <app-abroad></app-abroad>
+            </div>
+        </div>
+        <!-- right -->
+        <div class="column_item3">
+            <div class="first">
+                <!-- 人口类型列表 -->
+                <app-typelist></app-typelist>
+            </div>
+            <div class="second">
+                <!-- 人口户籍统计 -->
+                <app-house-hold></app-house-hold>
+            </div>
+        </div>
+    </div>
+</div>

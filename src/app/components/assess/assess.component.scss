@@ -1,0 +1,34 @@
+.assess_content {
+    height: 100%;
+    width: 100%;
+    .assess_body {
+        .event_report, .event_make, .event_over, .street_name {
+            float: left;
+            height: 100%;
+            width: 27%;
+        }
+        .street_name {
+            width: 19%;
+            .street {
+                justify-content: space-between;
+                align-items: center;
+                height: 90%;
+                img {
+                    width: 30%;
+                }
+                .one {
+                    font-size: 1.5vw;
+                    color: #FFCB09;
+                }
+                .two {
+                    font-size: 1.25vw;
+                    color: #F39800;
+                }
+                .three {
+                    font-size: 1vw;
+                    color: #F39800;
+                }
+            }
+        }
+    }
+}

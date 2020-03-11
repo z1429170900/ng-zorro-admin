@@ -1,0 +1,100 @@
+{
+  "id": "1224657",
+  "name": "华数app",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1071572",
+      "name": "组织",
+      "font_class": "zuzhi",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "3558789",
+      "name": "位置",
+      "font_class": "weizhi",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "4939711",
+      "name": "公司",
+      "font_class": "gongsi",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "6404778",
+      "name": "人员",
+      "font_class": "renyuan",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "9224861",
+      "name": "下 拉",
+      "font_class": "xiala",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "12504572",
+      "name": "社区",
+      "font_class": "shequ",
+      "unicode": "e674",
+      "unicode_decimal": 58996
+    },
+    {
+      "icon_id": "675246",
+      "name": "我",
+      "font_class": "wo",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "3164842",
+      "name": "添加",
+      "font_class": "add",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "3295471",
+      "name": "列表",
+      "font_class": "liebiao",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "8669520",
+      "name": "录入",
+      "font_class": "luru",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "1502791",
+      "name": "充值记录",
+      "font_class": "chongzhijilu",
+      "unicode": "e67d",
+      "unicode_decimal": 59005
+    },
+    {
+      "icon_id": "1966767",
+      "name": "支付宝",
+      "font_class": "alipay",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "4890621",
+      "name": "右",
+      "font_class": "you",
+      "unicode": "e71c",
+      "unicode_decimal": 59164
+    }
+  ]
+}

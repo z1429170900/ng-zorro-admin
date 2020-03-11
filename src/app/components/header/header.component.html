@@ -1,0 +1,15 @@
+<div class="toolbar clearfix" role="banner">
+    <div class="logo">
+    <img src="assets/image/logo.png" alt="">
+    </div>
+    <div class="title">
+        {{ title }}
+    </div>
+    <div class="date clearfix">
+        <div class="time">{{ nowTime | date:'hh:mm:ss' }}</div>
+        <div class="date_other">
+            <p>{{ nowWeek }}</p>
+            <p>{{ nowTime | date:'yyyy:MM:dd' }}</p>
+        </div>
+    </div>
+</div>

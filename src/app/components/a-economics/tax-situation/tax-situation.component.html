@@ -1,0 +1,28 @@
+<div class="tax_situation column">
+    <div class="title">
+        <app-title [title]="title"></app-title>
+    </div>
+    <div class="chart flex1">
+        <div class="circle_list flex">
+            <div class="circle_item flex">
+                <div class="circle">
+                    <app-canvas-circle [value]="tongbi.value" [type]="tongbi.type"></app-canvas-circle>
+                </div>
+                <div class="right_value column">
+                    <div class="type">{{ tongbi.type=='up' ? '同比增长':'同比下降' }}</div>
+                    <div class="value" [ngStyle]="{'color': tongbi.type=='up' ? '#34d67d' : '#f54212'}">{{ tongbi.value * 100 + '%' }}</div>
+                </div>
+            </div>
+            <div class="circle_item flex">
+                <div class="circle">
+                    <app-canvas-circle [value]="huanbi.value" [type]="huanbi.type"></app-canvas-circle>
+                </div>
+                <div class="right_value column">
+                    <div class="type">{{ huanbi.type=='up' ? '环比增长':'环比下降' }}</div>
+                    <div class="value" [ngStyle]="{'color': huanbi.type=='up' ? '#34d67d' : '#f54212'}">{{ huanbi.value * 100 + '%' }}</div>
+                </div>
+            </div>
+        </div>
+        <div id="echarts"></div>
+    </div>
+</div>

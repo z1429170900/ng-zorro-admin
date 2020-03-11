@@ -1,0 +1,34 @@
+<div class="side_menu">
+    
+    <ul nz-menu nzMode="inline" nzTheme="dark" [nzInlineCollapsed]="isCollapsed">
+        <div class="logo flex">
+            <img src="assets/image/logo.png" alt="">
+        </div>
+
+        <ng-template #nzMenuItem let-name="name" let-icon="icon" let-url="url" let-selected="selected">
+            <li nz-menu-item nz-tooltip nzPlacement="right" [nzSelected]="selected">
+                <a [routerLink]="[url]">
+                    <i nz-icon [nzType]="icon"></i>
+                    <span>{{ name }}</span>
+                </a>
+            </li>
+        </ng-template>
+
+        <ng-template #nzSubmenu let-name="name" let-icon="icon" let-url="url" let-children="children" let-open="isOpen">
+            <li nz-submenu [nzTitle]="name" [nzIcon]="icon" [nzOpen]="open">
+                <ul>
+                    <ng-container *ngFor="let item of children">
+                        <ng-container *ngTemplateOutlet="item.hasNext ? nzSubmenu : nzMenuItem; context: item"></ng-container>
+                    </ng-container>
+                </ul>
+            </li>
+        </ng-template>
+        
+        <ng-container *ngFor="let item of sideMenuData">
+            <ng-container *ngTemplateOutlet="item.hasNext ? nzSubmenu : nzMenuItem; context: item"></ng-container>
+        </ng-container>
+
+        
+        
+    </ul>
+</div>

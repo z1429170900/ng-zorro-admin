@@ -1,0 +1,41 @@
+.build_up {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba($color: #021243, $alpha: 0.7), rgba($color: #0c3f8f, $alpha: 0.7));
+    .chart {
+        .count_list {
+            width: 100%;
+            height: 40%;
+            justify-content: space-around;
+            padding: 2vh 0;
+            box-sizing: border-box;
+            .count_item {
+                width: 25%;
+                height: 100%;
+                .head {
+                    color: #fff;
+                    background-color: #00499b;
+                    height: 30%;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .body {
+                    color: #01ffff;
+                    background-color: #0a2e72;
+                    justify-content: center;
+                    align-items: center;
+                    height: 70%;
+                    .number {
+                        font-size: 1.5vw;
+                        margin-right: 0.25vw;
+                    }
+                }
+            }
+            
+        }
+        #echarts {
+            width: 100%;
+            height: 60%;
+        }
+    }
+}

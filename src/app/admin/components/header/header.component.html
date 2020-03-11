@@ -1,0 +1,25 @@
+<div class="admin_header clearfix">
+    <div class="swidch flex" [ngClass]="{close: isCollapsed}">
+        <button nz-button nzType="default" (click)="swidchOpen()" nzShape="circle"><i nz-icon nzType="menu-unfold"></i></button>
+    </div>
+    <div class="right_menu flex">
+        <!-- 放大缩小控件 -->
+        <div class="enlarge" nz-tooltip [nzTooltipTitle]="enlargeTitle" nzTooltipPlacement="bottom" (click)="toggleFullScreen()">
+            <i nz-icon nzType="fullscreen" nzTheme="outline" *ngIf="!zoomFlag"></i>
+            <i nz-icon nzType="fullscreen-exit" nzTheme="outline" *ngIf="zoomFlag"></i>
+        </div>
+        <!-- 头像 -->
+        <div class="picture">
+            <nz-badge [nzDot]="true" style="margin-right: 24px;" nz-dropdown [nzDropdownMenu]="menu">
+                <nz-avatar nzText="W" style="color:#f56a00; background-color:#fde3cf;"></nz-avatar>
+            </nz-badge>
+            <nz-dropdown-menu #menu="nzDropdownMenu">
+                <ul nz-menu nzSelectable>
+                    <li nz-menu-item>个人中心</li>
+                    <li nz-menu-item>切换头像</li>
+                    <li nz-menu-item>注销账号</li>
+                </ul>
+            </nz-dropdown-menu>
+        </div>
+    </div>
+</div>
